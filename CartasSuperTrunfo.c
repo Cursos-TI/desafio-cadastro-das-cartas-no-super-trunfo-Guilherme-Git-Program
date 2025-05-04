@@ -79,8 +79,8 @@ int main() {
     printf("Nome da cidade: %s \n", cidade1);
     printf("População: %d \n", habitantes1);
     printf("Área: %fkm² \n", area1);
-    printf("Estado: %f \n", pib1);
-    printf("Estado: %d \n", turisiticos1);
+    printf("PIB: %f \n", pib1);
+    printf("Número de Pontos Turísticos: %d \n", turisiticos1);
 
 //codigo referente a saida de informação da carta 2
 
@@ -90,8 +90,8 @@ int main() {
     printf("Nome da cidade: %s \n", cidade2);
     printf("População: %d \n", habitantes2);
     printf("Área: %fkm² \n", area2);
-    printf("Estado: %f \n", pib2);
-    printf("Estado: %d \n", turisiticos2);
+    printf("PIB: %f \n", pib2);
+    printf("Número de Pontos Turísticos: %d \n", turisiticos2);
 
 //fiz dessa maneira sabendo que poderia ter varias maneiras de resolver mas preferi começar fazendo o cadastro inteiro de duas cartas para depois-
 //exibilas em vez de, fazer e exibir uma por vez.
