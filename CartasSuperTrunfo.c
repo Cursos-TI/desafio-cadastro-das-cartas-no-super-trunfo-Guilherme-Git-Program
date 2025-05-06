@@ -16,6 +16,7 @@ int main() {
     int turisiticos1 = 50;
     float pibpercapta1 = 1;
     float densidadepopulacional1 = 1;
+    float SuperPoder1 = 1;
 
 //segunda declaração de variaveis
 
@@ -28,13 +29,14 @@ int main() {
     int turisiticos2 = 50;
     float pibpercapta2 = 1;
     float densidadepopulacional2 = 1;
+    float SuperPoder2 = 1;
 
 //codigo referente a entrada de informações da carta 1
 
     printf("Cadastro da Carta 1: \n");
 
     printf("Para representar o Estado digite uma letra de 'A' a 'H': \n");
-    scanf("%c", &estado1);
+    scanf(" %c", &estado1);
 
     printf("Para definir o codigo da carta digite um numero de '01' a '04': \n");
     scanf("%s", &codigo1);
@@ -59,7 +61,7 @@ int main() {
     printf("Cadastro da Carta 2: \n");
 
     printf("Para representar o Estado digite uma letra de 'A' a 'H': \n");
-    scanf("%c", &estado2);
+    scanf(" %c", &estado2);
 
     printf("Para definir o codigo da carta digite um numero de '01' a '04': \n");
     scanf("%s", &codigo2);
@@ -89,6 +91,14 @@ int main() {
     densidadepopulacional2 = habitantes2 / area2 ;
     pibpercapta2 = pib2 / habitantes2 ;
 
+//calcular o super poder da carta 1
+
+    SuperPoder1 = habitantes1 + area1 + pib1 + turisiticos1 + pibpercapta1 + (1 / densidadepopulacional1);
+
+//calcular o super poder da carta 2
+
+    SuperPoder2 = habitantes2 + area2 + pib2 + turisiticos2 + pibpercapta2 + (1 / densidadepopulacional2);
+
 //cogigo referente a saida de informação da carta 1
    
     printf("\ncarta1 \n");
@@ -114,6 +124,18 @@ int main() {
     printf("Número de Pontos Turísticos: %d \n", turisiticos2);
     printf("Densidade Populacional: %.2f \n", densidadepopulacional2);
     printf("PIB per Capita: %.2f \n", pibpercapta2);
+
+//comparação das cartas 1 e 2
+
+    printf("\nComparação de Cartas: \n");
+    printf("resultado da comparação: (1) para verdadeiro Carta 1 vence e (0) para falso Carta 2 vence\n");
+    printf("População: %d\n", habitantes1 > habitantes2 );
+    printf("Área: %d\n", area1 > area2);
+    printf("PIB: %d\n", pib1 > pib2);
+    printf("Pontos Turísticos: %d\n", turisiticos1 > turisiticos2);
+    printf("Densidade Populacional: %d\n", densidadepopulacional1 < densidadepopulacional2);
+    printf("PIB per Capita: %d\n", pibpercapta1 > pibpercapta2);
+    printf("Super Poder: %d\n", SuperPoder1 > SuperPoder2);
 
     return 0;
 }
